@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ Section</title>
+<style>
+    .faq-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-question {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.faq-answer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-question {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.faq-answer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+ */
+    .faq-container {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+</style>
+</head>
+<body>
+
+<div class="faq-container">
+    <!-- Your FAQ items go here -->
+    <div class="faq-item">
+        <button class="faq-question">What is your return policy?</button>
+        <div class="faq-answer">
+            <p>Our return policy is 30 days, no questions asked. Contact us for more details.</p>
+        </div>
+    </div>
+    <!-- ... more FAQ items ... -->
+</div>
+
+<script>
+    // document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqAnswer = button.nextElementSibling;
+
+        if (faqAnswer.style.maxHeight) {
+            faqAnswer.style.maxHeight = null;
+        } else {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+        } 
+    });
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqAnswer = button.nextElementSibling;
+            /* ... */
+        });
+    });
+</script>
+
+</body>
+</html>
